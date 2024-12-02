@@ -76,7 +76,7 @@ int findMaxRepeatingNumber(int matrix[MAX_SIZE][MAX_SIZE], int rows, int cols) {
 int main() {
     int rows, cols, random;
     int matrix[MAX_SIZE][MAX_SIZE];
-
+    
     printf("Введите количество строк и столбцов матрицы (не более %d): ", MAX_SIZE);
     while (1) {
         if (scanf("%d %d", &rows, &cols) == 2 && rows > 0 && cols > 0 && rows <= MAX_SIZE && cols <= MAX_SIZE) {
@@ -86,7 +86,7 @@ int main() {
             while (getchar() != '\n'); // очистка буфера ввода
         }
     }
-
+    
     printf("Заполнить матрицу случайными числами? (1 - да, 0 - нет): ");
     while (1) {
         if (scanf("%d", &random) == 1 && (random == 0 || random == 1)) {
@@ -96,20 +96,21 @@ int main() {
             while (getchar() != '\n'); // очистка буфера ввода
         }
     }
-
+    
     fillMatrix(matrix, rows, cols, random);
-
+    
     printMatrix(matrix, rows, cols);
-
+    
     int nonZeroRows = countNonZeroRows(matrix, rows, cols);
     int maxRepeating = findMaxRepeatingNumber(matrix, rows, cols);
-
+    
     if (maxRepeating == -1) {
         printf("В матрице нет чисел, встречающихся более одного раза.\n");
     } else {
         printf("Количество строк без нулей: %d\n", nonZeroRows);
         printf("Максимальное число, встречающееся более одного раза: %d\n", maxRepeating);
     }
-
+    
     return 0;
-}
+}hlinen
+typedef <#returnType#>(^<#name#>)(<#arguments#>);
