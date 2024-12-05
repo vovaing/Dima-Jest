@@ -112,5 +112,4 @@ int main() {
     }
     
     return 0;
-}hlinen
-typedef <#returnType#>(^<#name#>)(<#arguments#>);
+}
